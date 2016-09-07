@@ -59,7 +59,7 @@ ENTRY(strcmp)
 	prfm    pldl1strm, [src1]
 	prfm    pldl1strm, [src2]
 	b	.Lperf_critical
-.align  6
+.p2align  6
 .Lperf_critical:
 	/* Start of performance-critical section  -- one 64B cache line.  */
 	eor	tmp1, src1, src2
